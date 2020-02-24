@@ -1,22 +1,21 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
-
+import { isMobile } from "react-device-detect";
 const routes = [
   {
     title: "About Us",
     id: "#about"
   },
   {
+    title: "Contact Us",
+    id: "#contact"
+  },
+  {
     title: "Services",
     id: "#services"
   },
   {
-    title: "Our Work",
+    title: "Features",
     id: "#features"
-  },
-  {
-    title: "Contact Us",
-    id: "#contact"
   }
 ];
 
@@ -29,12 +28,13 @@ export const onClick = id => {
 export default () => {
   return (
     <div className='conatiner'>
-      <nav id='header' className='navbar header navbar-expand-lg'>
+      <nav id='header' className='navbar header py-0 navbar-expand-lg px-4'>
         <a className='navbar-brand' href='/'>
           <img
-            style={{ width: 150, height: 75 }}
-            src={require("../img/fullyfinal.png")}
-            alt='Benexgen_logo'
+            height={isMobile ? "50px" : "100px"}
+            width={isMobile ? "100px" : "200px"}
+            src={require("../img/benexgen.png")}
+            alt='Company Logo'
           />
         </a>
 
@@ -48,7 +48,7 @@ export default () => {
           aria-label='Toggle navigation'>
           <i
             className='lnr lnr-menu'
-            style={{ fontWeight: 900, color: "#fff" }}
+            style={{ fontWeight: 900, color: "orange" }}
           />
         </button>
 
@@ -62,39 +62,41 @@ export default () => {
                 data-toggle='collapse'
                 data-target='.navbar-collapse.show'
                 className='nav-item'>
-                <p onClick={() => onClick(id)} className='mx-2 nav-link'>
+                <p
+                  onClick={() => onClick(id)}
+                  className='mx-2 text-white nav-link'>
                   {title}
                 </p>
               </li>
             ))}
           </ul>
-          <button style={styles.button} onClick={onClick}>
-            <Typography>Get In Touch</Typography>
-          </button>
+          <div onClick={() => onClick("#contact")}>
+            <button
+              style={{
+                background: `linear-gradient(45deg, ${"#fe6b8b"} 30%, ${"#ff8e53"} 90%)`,
+                borderRadius: 3,
+                border: 0,
+                color: "white",
+                height: 48,
+                width: "100%",
+                padding: "0px 20px",
+                boxShadow: "0px 3px 5px 2px rgba(255, 105, 135, .3)",
+                display: "flex",
+
+                justifyContent: "center",
+                outlined: "none",
+                cursor: "pointer",
+                textAlign: "center",
+                fontSize: 12
+              }}
+              className='mx-2 btn demo-btn hvr-sweep-to-right'
+              data-toggle='collapse'
+              data-target='.navbar-collapse.show'>
+              Book a demo
+            </button>
+          </div>
         </div>
       </nav>
     </div>
   );
-};
-
-const styles = {
-  button: {
-    background: `linear-gradient(45deg, ${"#fe6b8b"} 30%, ${"#ff8e53"} 90%)`,
-    borderRadius: 3,
-    border: 0,
-    color: "white",
-    height: 48,
-    width: 150,
-
-    padding: "0px 20px",
-    boxShadow: "0px 3px 5px 2px rgba(255, 105, 135, .3)",
-    display: "flex",
-    alignSelf: "center",
-    justifyContent: "center",
-    outlined: "none",
-    cursor: "pointer",
-    textAlign: "center",
-    fontSize: 17,
-    fontFamily: '"Gill Sans", sans-serif'
-  }
 };

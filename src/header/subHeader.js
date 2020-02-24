@@ -3,7 +3,7 @@ import Particle from "./particles";
 
 import Typed from "react-typed";
 import { Typography } from "@material-ui/core";
-// import animationData from "../img/sub_header.json";
+import { isMobile } from "react-device-detect";
 
 class subHeader extends Component {
   render() {
@@ -44,7 +44,7 @@ class subHeader extends Component {
 
           <Typed
             style={{
-              fontSize: 35,
+              fontSize: isMobile ? 23 : 35,
               zIndex: 1,
               color: "orange",
               fontFamily: "Courier New, monospace"
@@ -55,7 +55,8 @@ class subHeader extends Component {
               "Mobile Applications",
               "Seo",
               "Digital Marketing",
-              "Designing stuff"
+              "Graphics Designing",
+              "Hosting and much more"
             ]}
             typeSpeed={70}
             backSpeed={100}

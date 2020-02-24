@@ -67,7 +67,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #232323;
+  background: red;
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition-property: transform;
