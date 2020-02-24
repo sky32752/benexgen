@@ -1,30 +1,123 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import {
+  Container,
+  Box,
+  Typography,
+  Tab,
+  Tabs,
+  AppBar
+} from "@material-ui/core";
 
-const Features = () => (
-  <div className="features border-bottom">
-    <div id="features" className="anchor" />
-    <h1 className="text-center section-title mt-5">OUR WORK</h1>
-    <h6 className="text-mutted">
-      We like to let our work speak for itself. Take a look at our selected
-      stories for digital transformation and end-to-end software product
-      development, both with the most enjoyable UX.
-    </h6>
-    <div className="container-fluid">
-      <div className="row">
-        <ul>
-          <li>Hungrycare</li>
-          <li>Edurial</li>
-        </ul>
-      </div>
+import HungryCare from "./hungryCare";
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <Typography
+      component='div'
+      role='tabpanel'
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}>
+      {value === index && <Box p={3}>{children}</Box>}
+    </Typography>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired
+};
+
+function a11yProps(index) {
+  return {
+    id: `full-width-tab-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`
+  };
+}
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: theme.palette.background.paper
+  }
+}));
+
+export default function FullWidthTabs() {
+  const classes = useStyles();
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <div id='features' className={classes.root}>
+      <AppBar
+        position='static'
+        color='default'
+        style={{ backgroundColor: "#ecf0f1" }}>
+        <Container
+          style={{
+            display: "flex",
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center"
+          }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            indicatorColor='primary'
+            textColor='primary'
+            variant='scrollable'
+            scrollButtons='auto'>
+            {[
+              {
+                index: 0,
+                title: "HungryCare"
+              },
+              {
+                index: 1,
+                title: "Edurial"
+              },
+              {
+                index: 2,
+                title: "Contributions"
+              },
+              { index: 3, title: "Web Development" },
+              {
+                index: 4,
+                title: "Designs"
+              }
+            ].map(element => {
+              return (
+                <Tab label={element.title} {...a11yProps(element.index)} />
+              );
+            })}
+          </Tabs>
+        </Container>
+      </AppBar>
+
+      <TabPanel value={value} index={0} dir={theme.direction}>
+        <HungryCare />
+      </TabPanel>
+      <TabPanel value={value} index={1} dir={theme.direction}>
+        Item Three
+      </TabPanel>
+      <TabPanel value={value} index={2} dir={theme.direction}>
+        Item Three
+      </TabPanel>
+      <TabPanel value={value} index={3} dir={theme.direction}>
+        Item Three
+      </TabPanel>
+      <TabPanel value={value} index={4} dir={theme.direction}>
+        Item Three
+      </TabPanel>
     </div>
-  </div>
-);
-
-// const Item = ({ title, icon}) => (
-//    <div className="py-5 d-flex flex-column align-center justify-content-center">
-//       <div className="avatar justify-content-center hvr-radial-out"><i className={icon}></i></div>
-//       <p className="d-block features-text text-center">{title}</p>
-//     </div>
-// );
-
-export default Features;
+  );
+}

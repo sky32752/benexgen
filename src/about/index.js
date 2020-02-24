@@ -45,33 +45,30 @@ class About extends Component {
 
   render() {
     return (
-      <div className="container-fluid p-5">
-        <div id="about" className="anchor" />
-        <div className="row">
-          <div className="col-md-6 p-0 about-text">
-            <h1 className="text-left about-title black-text section-title mt-5">
+      <div className='container-fluid p-5'>
+        <div id='about' className='anchor' />
+        <div className='row'>
+          <div className='col-md-6 p-0 about-text'>
+            <h1 className='text-left about-title black-text section-title mt-5'>
               WHO WE ARE
             </h1>
-            <h5 className="py-3 about-desc answer">
-              <strong>Hungrycare</strong>{" "}
+            <h5 className='py-3 about-desc answer'>
               <em>
-                is an operating system for restaurants. It helps in managing the
-                daily operations of a restaurant efficiently. Started in
-                December 2018, we are focused on providing the best user
-                experience possible, to our customers. <br />
-                <br />
-                We believe in the beauty of simplicity, that's why our
-                User-Interfaces are simple to use, and we at Hungrycare, are
-                working hard on making it simpler for people to order food.
+                We here at Benexgen are a cohesive team , all hell-bent to
+                provide you your dream website and content . Whatever your needs
+                , from web development , to content writing , we've got it all
+                covered for you . Our team is fully focused and always ready to
+                provide solutions and custom-make your website to suit your
+                personality and skill.
               </em>
             </h5>
           </div>
-          <div className="col-md-6 p-0 about-image">
+          <div className='col-md-6 p-0 about-image'>
             <img
-              width="100%"
-              height="100%"
-              src="./images/about.png"
-              alt="aboutImage"
+              width='100%'
+              height='100%'
+              src='./images/about.png'
+              alt='aboutImage'
             />
           </div>
         </div>

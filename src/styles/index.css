@@ -295,16 +295,6 @@ textarea {
 }
 /* subHeader */
 
-.banner-section {
-  position: relative;
-  color: white;
-  background-image: url("../img/header.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 150vh;
-}
-
 .content-section {
   padding-top: 200px;
   justify-content: center;

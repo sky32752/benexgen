@@ -7,12 +7,14 @@ import Contact from "./contact";
 import { Footer } from "./common";
 import Header from "./header";
 import SubHeader from "./header/subHeader";
+import CommitmentSection from "./information";
+import StartUp from "./startup";
 
 const contacts = {
-  email: "hello@wwwizard.com",
-  call: "7005155031",
+  email: "hello@benexgen.com",
+  call: "7005449722",
   address: "Nongthymmai, Shillong, Meghalaya - 793014",
-  company: "WWWizard"
+  company: "Benexgen"
 };
 
 const ScrollMagic = window.ScrollMagic;
@@ -35,8 +37,11 @@ class App extends Component {
       <div>
         <Header />
         <SubHeader />
+        <CommitmentSection />
         <Services />
+
         <Features />
+        <StartUp />
         <About />
         <Contact details={contacts} />
         <Footer details={contacts} />
