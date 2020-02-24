@@ -87,7 +87,14 @@ class Services extends Component {
             <div className='service col-md-6 p-5'>
               <img alt='app_development' src={require("../img/loupe.png")} />
               <h4>Search Engine Optimization (Seo) </h4>
-              <p className='text-muted'>We can help to improve your business</p>
+              <p className='text-muted'>
+                What is SEO and what do you need it for ? Search Engine
+                Optimisation is the most powerful tool in order to increase your
+                website's traffic . Google has secret algorithms that ranks your
+                website and this is significant as the higher your website ranks
+                , the more visible it is to the person searching for relevant
+                content .
+              </p>
             </div>
             <div className='service col-md-6 p-5'>
               <img
@@ -112,7 +119,15 @@ class Services extends Component {
             <div className='service col-md-6 p-5'>
               <img alt='app_development' src={require("../img/content.png")} />
               <h4>Software Development</h4>
-              <p className='text-muted'>We can help to improve your business</p>
+              <p className='text-muted'>
+                Do you have an idea for a software , but lack the time or skills
+                to code it yourself ? Worry not , we shall take the utmost care
+                in designing your software according to your needs , and
+                providing support incase anything goes sideways . The online
+                world is a blooming one , and new softwares are required every
+                hour , and a cohesive team , means a cohesive software . And
+                that is what we ensure you get .
+              </p>
             </div>
             <div className='service col-md-6 p-5'>
               <img
