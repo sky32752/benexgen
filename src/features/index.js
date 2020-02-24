@@ -43,7 +43,9 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: "#f1f2f6",
+    backgroundImage: `url(${require("../img/work.png")})`,
+    backgroundRepeat: "no-repeat"
   }
 }));
 

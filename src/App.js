@@ -9,7 +9,7 @@ import Header from "./header";
 import SubHeader from "./header/subHeader";
 import CommitmentSection from "./information";
 import StartUp from "./startup";
-
+import Clients from "./client";
 const contacts = {
   email: "hello@benexgen.com",
   call: "7005449722",
@@ -41,7 +41,9 @@ class App extends Component {
         <Services />
 
         <Features />
+
         <StartUp />
+
         <About />
         <Contact details={contacts} />
         <Footer details={contacts} />

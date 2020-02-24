@@ -22,6 +22,7 @@ class subHeader extends Component {
           minHeight: "85vh",
           display: "flex",
           flex: 1,
+
           flexDirection: "column"
         }}>
         <Particle />

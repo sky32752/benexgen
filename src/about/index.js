@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import Lottie from "react-lottie";
+import AboutAnimation from "../img/about.json";
 const TweenMax = window.TweenMax;
 const ScrollMagic = window.ScrollMagic;
 
@@ -44,6 +45,14 @@ class About extends Component {
   }
 
   render() {
+    const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: AboutAnimation,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+      }
+    };
     return (
       <div className='container-fluid p-5'>
         <div id='about' className='anchor' />
@@ -64,12 +73,7 @@ class About extends Component {
             </h5>
           </div>
           <div className='col-md-6 p-0 about-image'>
-            <img
-              width='100%'
-              height='100%'
-              src='./images/about.png'
-              alt='aboutImage'
-            />
+            <Lottie options={defaultOptions} />
           </div>
         </div>
       </div>

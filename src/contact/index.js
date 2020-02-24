@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./mail.js";
 
 const TweenMax = window.TweenMax;
@@ -45,37 +45,45 @@ class Contact extends Component {
   render() {
     const { details } = this.props;
     return (
-      <div className="container-fluid p-5 mb-5">
-        <div id="contact" className="anchor" />
-        <div className="row">
-          <div className="cform col-md-6">
-            <div className="inner-wrapper">
-              <form className="gform" action={emailUrl} method="POST">
+      <div
+        style={{
+          backgroundImage: `url(${require("../img/map.jpg")})`,
+          marginBottom: -100,
+          backgroundSize: "cover"
+        }}
+        className='container-fluid p-5 mb-5'>
+        <div id='contact' className='anchor' />
+        <div className='row'>
+          <div className='cform col-md-6'>
+            <div className='inner-wrapper'>
+              <form className='gform' action={emailUrl} method='POST'>
                 <input
                   required
-                  className="form-elements input mb-3"
-                  name="Name"
-                  type="text"
-                  placeholder="Your Name"
+                  className='form-elements input mb-3'
+                  name='Name'
+                  type='text'
+                  placeholder='Your Name'
                 />
                 <input
                   required
-                  className="form-elements input mb-3"
-                  type="text"
-                  name="Contact"
-                  placeholder="Mobile Number"
+                  className='form-elements input mb-3'
+                  type='text'
+                  name='Contact'
+                  placeholder='Mobile Number'
                 />
                 <textarea
                   required
-                  className="form-elements input mb-3"
-                  name="message"
-                  placeholder="Message"
-                ></textarea>
-                <button id="button" className="btn submit-btn" type="submit">
-                  <p id="icon" className="m-0 lnr lnr-chevron-right"></p>
+                  className='form-elements input mb-3'
+                  name='message'
+                  placeholder='Message'></textarea>
+                <button id='button' className='btn submit-btn' type='submit'>
+                  <p id='icon' className='m-0 lnr lnr-chevron-right'>
+                    {" "}
+                    Submit
+                  </p>
                 </button>
 
-                <div style={{ display: "none" }} className="thankyou_message">
+                <div style={{ display: "none" }} className='thankyou_message'>
                   <p>
                     <em>Thank You!</em> We will get back to you soon
                   </p>
@@ -83,20 +91,20 @@ class Contact extends Component {
               </form>
             </div>
           </div>
-          <div className="col-md-6 justify-content-center d-flex flex-column pl-5 pt-5 mt-5">
-            <h2 className="mb-4 black-text ctext">
+          <div className='col-md-6 justify-content-center d-flex flex-column pl-5 pt-5 mt-5'>
+            <h2 className='mb-4 black-text ctext'>
               Got a big idea? Let us help you turn your dream into software!
             </h2>
-            <p className="font-16 details">
-              <i className="mr-3 fa fa-envelope"></i>
+            <p className='font-16 details'>
+              <i className='mr-3 fa fa-envelope'></i>
               {details.email}
             </p>
-            <p className="font-16 details">
-              <i className="mr-3 fa fa-mobile"></i>
+            <p className='font-16 details'>
+              <i className='mr-3 fa fa-mobile'></i>
               {details.call}
             </p>
-            <p className="font-16 details">
-              <i className="mr-3 fa fa-map-marker-alt"></i>
+            <p className='font-16 details'>
+              <i className='mr-3 fa fa-map-marker-alt'></i>
               {details.address}
             </p>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, Box } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import { isMobile } from "react-device-detect";
 import Lottie from "react-lottie";
 import animationData from "../img/startup.json";
@@ -25,13 +25,19 @@ class Startup extends React.Component {
           {" "}
           <Lottie options={defaultOptions} />
         </Container>
+
         <Container
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
-            background: "linear-gradient(to right bottom, #141e30  , #243b55)",
-            justifyContent: "center"
+            background: "linear-gradient(to right bottom, #757f9a  , #d7dde8)",
+            justifyContent: "center",
+            borderRadius: 20
           }}>
+          <Typography variant='h3' style={{ color: "white", marginBottom: 20 }}>
+            We Empower Startups
+          </Typography>
           <Typography variant='subtitle1' style={{ color: "white" }}>
             Startup is power , it is freedom , its independence , and above all
             , it's revolutionary Imagine not having to break your neck in order

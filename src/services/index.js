@@ -33,7 +33,14 @@ class Services extends Component {
   render() {
     return (
       <Fragment>
-        <section className='container-fluid section' id='services'>
+        <section
+          style={{
+            backgroundImage: `url(${require("../img/bg-services.png")})`,
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#F4F7F6"
+          }}
+          className='container-fluid section'
+          id='services'>
           <h2 className='services-title'>
             BUILDING DISRUPTIVE PRODUCT <br /> WITH THE USER IN MIND
           </h2>

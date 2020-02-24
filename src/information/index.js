@@ -29,62 +29,69 @@ class CommitmentSection extends Component {
     ];
 
     return (
-      <div
-        style={{
-          position: "relative",
-          display: "flex",
-          flexDirection: isMobile ? "column" : "row",
-          justifyContent: "center",
-          alignItems: "center"
-        }}>
-        {info.map(data => {
-          return (
-            <Card
-              key={data.id}
-              style={{
-                margin: "5vh",
+      <div style={{ backgroundColor: "#F4F7F6" }}>
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            flex: 1,
+            flexDirection: isMobile ? "column" : "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "transparent"
+          }}>
+          {info.map(data => {
+            return (
+              <Card
+                key={data.id}
+                style={{
+                  margin: "5vh",
 
-                maxWidth: isMobile ? null : "50vw",
-                maxHeight: isMobile ? null : "30vh",
-                borderRadius: 10,
-                boxShadow:
-                  "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)"
-              }}>
-              <div style={{ display: "flex", flex: 1, flexDirection: "row" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    flex: 1,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#ededed"
-                  }}>
-                  <img
-                    alt={data.title}
-                    style={{ margin: "10px", height: "70px", width: "70px" }}
-                    src={data.icon}
-                  />
-                </div>
-                <div>
-                  <Typography
-                    variant='h6'
+                  maxWidth: isMobile ? null : "50vw",
+                  maxHeight: isMobile ? null : "30vh",
+                  borderRadius: 10,
+                  boxShadow:
+                    "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)"
+                }}>
+                <div style={{ display: "flex", flex: 1, flexDirection: "row" }}>
+                  <div
                     style={{
-                      color: "gray",
-                      margin: "10px",
-                      fontFamily: "Helvetica, sans-serif"
+                      display: "flex",
+                      flex: 1,
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#ededed"
                     }}>
-                    {data.title}
-                  </Typography>
+                    <img
+                      alt={data.title}
+                      style={{ margin: "10px", height: "70px", width: "70px" }}
+                      src={data.icon}
+                    />
+                  </div>
+                  <div>
+                    <Typography
+                      variant='h6'
+                      style={{
+                        color: "gray",
+                        margin: "10px",
+                        fontFamily: "Helvetica, sans-serif"
+                      }}>
+                      {data.title}
+                    </Typography>
 
-                  <Typography
-                    style={{ margin: "10px", fontFamily: "Arial, sans-serif" }}>
-                    {data.desc}
-                  </Typography>
+                    <Typography
+                      style={{
+                        margin: "10px",
+                        fontFamily: "Arial, sans-serif"
+                      }}>
+                      {data.desc}
+                    </Typography>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          );
-        })}
+              </Card>
+            );
+          })}
+        </div>
       </div>
     );
   }
