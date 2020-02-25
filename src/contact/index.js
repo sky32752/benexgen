@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "./mail.js";
 
 const TweenMax = window.TweenMax;
@@ -48,10 +48,10 @@ class Contact extends Component {
       <div
         style={{
           backgroundImage: `url(${require("../img/map.jpg")})`,
-          marginBottom: -100,
+
           backgroundSize: "cover"
         }}
-        className='container-fluid p-5 mb-5'>
+        className='container-fluid p-5'>
         <div id='contact' className='anchor' />
         <div className='row'>
           <div className='cform col-md-6'>
@@ -92,20 +92,17 @@ class Contact extends Component {
             </div>
           </div>
           <div className='col-md-6 justify-content-center d-flex flex-column pl-5 pt-5 mt-5'>
-            <h2 className='mb-4 black-text ctext'>
+            <h2 style={{ color: "white" }} className='mb-4 blue-text ctext'>
               Got a big idea? Let us help you turn your dream into software!
             </h2>
             <p className='font-16 details'>
-              <i className='mr-3 fa fa-envelope'></i>
-              {details.email}
+              <i className='glyphicon glyphicon-search'>njnjnjj</i>
             </p>
             <p className='font-16 details'>
               <i className='mr-3 fa fa-mobile'></i>
-              {details.call}
             </p>
             <p className='font-16 details'>
               <i className='mr-3 fa fa-map-marker-alt'></i>
-              {details.address}
             </p>
           </div>
         </div>

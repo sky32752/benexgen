@@ -63,6 +63,9 @@ export default () => {
                 data-target='.navbar-collapse.show'
                 className='nav-item'>
                 <p
+                  style={{
+                    cursor: "pointer"
+                  }}
                   onClick={() => onClick(id)}
                   className='mx-2 text-white nav-link'>
                   {title}
@@ -92,7 +95,7 @@ export default () => {
               className='mx-2 btn demo-btn hvr-sweep-to-right'
               data-toggle='collapse'
               data-target='.navbar-collapse.show'>
-              Book a demo
+              Let's Go
             </button>
           </div>
         </div>

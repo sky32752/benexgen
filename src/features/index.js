@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 
 import HungryCare from "./hungryCare";
-
+import WebDevelopment from "./websiteDevelopment";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -45,7 +45,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f1f2f6",
     backgroundImage: `url(${require("../img/work.png")})`,
-    backgroundRepeat: "no-repeat"
+    backgroundRepeat: "no-repeat",
+    padding: 50,
+    marginBottom: 50
   }
 }));
 
@@ -81,7 +83,7 @@ export default function FullWidthTabs() {
             {[
               {
                 index: 0,
-                title: "HungryCare"
+                title: "Web Development"
               },
               {
                 index: 1,
@@ -91,7 +93,7 @@ export default function FullWidthTabs() {
                 index: 2,
                 title: "Contributions"
               },
-              { index: 3, title: "Web Development" },
+              { index: 3, title: "Hungrycare" },
               {
                 index: 4,
                 title: "Designs"
@@ -106,16 +108,14 @@ export default function FullWidthTabs() {
       </AppBar>
 
       <TabPanel value={value} index={0} dir={theme.direction}>
-        <HungryCare />
+        <WebDevelopment />
       </TabPanel>
-      <TabPanel value={value} index={1} dir={theme.direction}>
-        Item Three
-      </TabPanel>
+      <TabPanel value={value} index={1} dir={theme.direction}></TabPanel>
       <TabPanel value={value} index={2} dir={theme.direction}>
         Item Three
       </TabPanel>
       <TabPanel value={value} index={3} dir={theme.direction}>
-        Item Three
+        <HungryCare />
       </TabPanel>
       <TabPanel value={value} index={4} dir={theme.direction}>
         Item Three
